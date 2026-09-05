@@ -1,0 +1,13 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {"name":"windows","displayName":"Windows x64","generator":"Visual Studio 17 2022","architecture":"x64","binaryDir":"${sourceDir}/build/windows","condition":{"type":"equals","lhs":"${hostSystemName}","rhs":"Windows"}},
+    {"name":"macos","displayName":"macOS native architecture","generator":"Ninja","binaryDir":"${sourceDir}/build/macos","cacheVariables":{"CMAKE_BUILD_TYPE":"Release"},"condition":{"type":"equals","lhs":"${hostSystemName}","rhs":"Darwin"}},
+    {"name":"linux","displayName":"Linux native architecture","generator":"Ninja","binaryDir":"${sourceDir}/build/linux","cacheVariables":{"CMAKE_BUILD_TYPE":"Release"},"condition":{"type":"equals","lhs":"${hostSystemName}","rhs":"Linux"}}
+  ],
+  "buildPresets": [
+    {"name":"windows","configurePreset":"windows","configuration":"Release"},
+    {"name":"macos","configurePreset":"macos"},
+    {"name":"linux","configurePreset":"linux"}
+  ]
+}

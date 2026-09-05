@@ -1,0 +1,13 @@
+build/
+dist/
+work/
+package/
+data/
+**/data/
+*.auth.dpapi
+auth.json
+auth.json.*
+switch-result.json
+*.tmp
+*.bak
+*.user
