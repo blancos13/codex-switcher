@@ -1,4 +1,4 @@
-# Codex Switcher
+# Codex Account Switcher
 
 **Your Codex accounts, one small window.**
 
