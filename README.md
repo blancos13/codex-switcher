@@ -4,7 +4,7 @@
 
 Switch accounts, see how much usage you have left, and know when your limits reset. Built in C++ with Dear ImGui, with a familiar blue interface and a few extra themes to make it yours.
 
-<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/3991b883-86b8-41f7-a8a6-018f3ad25938" />
+<img width="1249" height="742" alt="image" src="https://github.com/user-attachments/assets/51000f98-c0ac-42d4-b01f-0dc1255f5606" />
 
 Download the latest Windows build from [Releases](https://github.com/blancos13/codex-switcher/releases/latest).
 
