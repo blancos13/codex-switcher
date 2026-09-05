@@ -85,6 +85,12 @@ void LimitTooltip(const char *label, int64_t resetsAt, bool checking, bool refre
 } // namespace
 Studio::Studio(std::filesystem::path root, bool preview)
     : root_(std::move(root)), store_(platform::DataDirectory(root_) / "accounts"), preview_(preview) {
+    if(!preview_){
+        const auto dataRoot=platform::DataDirectory(root_);
+        std::filesystem::create_directories(dataRoot/"accounts/profiles");
+        std::filesystem::create_directories(dataRoot/"accounts/temp");
+        std::filesystem::create_directories(platform::AssetDirectory(root_)/"fonts");
+    }
     if (preview_) {
         profiles_ = {
             {"demo1", "Primary", "#4296FA", "", "pro", "2026-09-05T08:00:00Z", 72, 84, true, true},

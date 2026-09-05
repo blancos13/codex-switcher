@@ -8,6 +8,8 @@ Switch accounts, see how much usage you have left, and know when your limits res
 
 Download the latest Windows build from [Releases](https://github.com/blancos13/codex-switcher/releases/latest).
 
+The Windows release can be launched directly from the `.exe`; its local data folders are created automatically beside it on first start.
+
 ## 🔧 Installation
 
 ### Windows
