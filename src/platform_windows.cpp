@@ -9,8 +9,6 @@
 namespace platform {
 Path Executable(){wchar_t path[32768];DWORD n=GetModuleFileNameW(nullptr,path,32768);if(!n||n==32768)throw std::runtime_error("Could not resolve executable path.");return path;}
 Path DataDirectory(const Path& root){
-    wchar_t path[32768];DWORD n=GetEnvironmentVariableW(L"CODEX_SWITCHER_DATA_HOME",path,32768);
-    if(n&&n<32768)return std::filesystem::absolute(path);
     return root/"data";
 }
 Path AssetDirectory(const Path& root){return root/"assets";}
