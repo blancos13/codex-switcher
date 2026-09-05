@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <shellapi.h>
+#include <shlobj.h>
 #include <appmodel.h>
 #include "platform.h"
 #include "accounts.h"
@@ -7,7 +8,11 @@
 #include <cstdlib>
 namespace platform {
 Path Executable(){wchar_t path[32768];DWORD n=GetModuleFileNameW(nullptr,path,32768);if(!n||n==32768)throw std::runtime_error("Could not resolve executable path.");return path;}
-Path DataDirectory(const Path& root){wchar_t path[32768];DWORD n=GetEnvironmentVariableW(L"CODEX_SWITCHER_DATA_HOME",path,32768);if(n&&n<32768)return std::filesystem::absolute(path);return root/"data";}
+Path DataDirectory(const Path& root){
+    wchar_t path[32768];DWORD n=GetEnvironmentVariableW(L"CODEX_SWITCHER_DATA_HOME",path,32768);
+    if(n&&n<32768)return std::filesystem::absolute(path);
+    return root/"data";
+}
 Path AssetDirectory(const Path& root){return root/"assets";}
 void Erase(void* data,size_t size){if(size)SecureZeroMemory(data,size);}
 bool RemoveFile(const Path& path){return DeleteFileW(path.c_str())!=0;}
