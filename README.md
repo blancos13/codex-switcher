@@ -1,8 +1,12 @@
-# Codex Account Switcher
+# Codex Switcher
 
 **Your Codex accounts, one small window.**
 
 Switch accounts, see how much usage you have left, and know when your limits reset. Built in C++ with Dear ImGui, with a familiar blue interface and a few extra themes to make it yours.
+
+![Codex Switcher in Emerald theme](assets/screenshots/emerald-theme.png)
+
+Download the latest Windows build from [Releases](https://github.com/blancos13/codex-switcher/releases/latest).
 
 ## 🔧 Installation
 
