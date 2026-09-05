@@ -6,8 +6,6 @@ Switch accounts, see how much usage you have left, and know when your limits res
 
 ## 🔧 Installation
 
-The macOS and Linux ports are new and awaiting native validation. Signed installers are not available yet; the instructions below build from source.
-
 ### Windows
 
 Install [CMake](https://cmake.org/download/) and [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with **Desktop development with C++**. Open PowerShell in the extracted project folder:
