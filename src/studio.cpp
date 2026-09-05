@@ -93,9 +93,9 @@ Studio::Studio(std::filesystem::path root, bool preview)
     }
     if (preview_) {
         profiles_ = {
-            {"demo1", "Primary", "#4296FA", "", "pro", "2026-09-05T08:00:00Z", 72, 84, true, true},
-            {"demo2", "Development", "#AA66FF", "", "plus", "2026-09-05T08:00:00Z", 48, 61, false, true},
-            {"demo3", "Backup", "#33DD99", "", "pro", "2026-09-05T08:00:00Z", 91, 96, false, true}};
+            {"demo1", "Account 1", "#4296FA", "", "pro", "2026-09-05T08:00:00Z", 72, 84, true, true},
+            {"demo2", "Account 2", "#AA66FF", "", "plus", "2026-09-05T08:00:00Z", 48, 61, false, true},
+            {"demo3", "Account 3", "#33DD99", "", "pro", "2026-09-05T08:00:00Z", 91, 96, false, true}};
         status = "Preview data";
         const auto now = std::chrono::duration_cast<std::chrono::seconds>(
                              std::chrono::system_clock::now().time_since_epoch())
